@@ -1,7 +1,5 @@
 package net.treelzebub.hohoho.lastyear
 
-import net.treelzebub.hohoho.splitNewLine
-
 object Day4 {
 
     fun go() {
@@ -15,7 +13,7 @@ object Day4 {
     }
 
     private fun parse(): List<Pair<IntRange, IntRange>> {
-        return input.splitNewLine().map {
+        return input.lines().map {
             val pair = it.split(",")
             range(pair[0]) to range(pair[1])
         }

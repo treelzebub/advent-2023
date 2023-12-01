@@ -1,7 +1,5 @@
 package net.treelzebub.hohoho.lastyear
 
-import net.treelzebub.hohoho.splitNewLine
-
 object Day7 {
 
     private const val SIZE_LIMIT = 100_000
@@ -36,7 +34,7 @@ object Day7 {
     }
 
     private fun map(string: String): Map<String, Int> {
-        val commands = string.splitNewLine()
+        val commands = string.lines()
         return buildMap {
             put("", 0)
             var cwd = ""

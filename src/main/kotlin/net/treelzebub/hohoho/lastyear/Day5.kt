@@ -1,7 +1,6 @@
 package net.treelzebub.hohoho.lastyear
 
 import net.treelzebub.hohoho.splitDoubleNewLine
-import net.treelzebub.hohoho.splitNewLine
 import java.util.ArrayDeque
 
 object Day5 {
@@ -13,7 +12,7 @@ object Day5 {
     )
 
     fun go() {
-//        part1()
+        part1()
         part2()
     }
 
@@ -25,7 +24,7 @@ object Day5 {
 
     private fun moveCrates(preserveOrder: Boolean): List<ArrayDeque<Char>> {
         val (rawMatrix, rawInstructions) = input.splitDoubleNewLine()
-            .let { it[0].splitNewLine().dropLast(1) to it[1].splitNewLine() }
+            .let { it[0].lines().dropLast(1) to it[1].lines() }
         val columnList = buildListOfColumns(rawMatrix)
         val instructions = parseInstructions(rawInstructions)
         return moveCrates(columnList, instructions, preserveOrder)
@@ -79,7 +78,7 @@ object Day5 {
     private fun part2() {
         val moved = moveCrates(true)
         val tops = moved.map { it.first() }
-        println("Part 1: Tops of Stacks are: ${tops.joinToString("")}")
+        println("Part 2: Tops of Stacks are: ${tops.joinToString("")}")
     }
 }
 

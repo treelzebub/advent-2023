@@ -10,10 +10,10 @@ object Day1 {
     }
 
     fun go() {
-        val lines = input.splitNewLine()
+        val lines = input.lines()
         part1(lines)
 
-        val lines2 = input.splitNewLine().map { it.digitsOnly() }
+        val lines2 = input.lines().map { it.digitsOnly() }
         part2(lines2)
     }
 

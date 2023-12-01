@@ -1,8 +1,5 @@
 package net.treelzebub.hohoho.lastyear
 
-import net.treelzebub.hohoho.splitNewLine
-
-
 private val CHARS = listOf(
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
@@ -15,7 +12,7 @@ object Day3 {
     }
 
     private fun part1() {
-        val list = input.splitNewLine().map { split(it) }
+        val list = input.lines().map { split(it) }
         val priorities = list.map { priority(charInBoth(it)) }
         val sum = priorities.sum()
         println("Priorities = $sum")
@@ -42,7 +39,7 @@ object Day3 {
     }
 
     private fun part2() {
-        val list = input.splitNewLine().toMutableList()
+        val list = input.lines().toMutableList()
         val total = byThrees(list)
         println("Part 2 Total is: $total")
     }
