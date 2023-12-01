@@ -12,6 +12,7 @@ object Day1 {
     fun go() {
         val lines = input.splitNewLine()
         part1(lines)
+
         val lines2 = input.splitNewLine().map { it.digitsOnly() }
         part2(lines2)
     }
@@ -21,23 +22,20 @@ object Day1 {
         println("Total is: $total")
     }
 
-    private fun digit(line: String): Int {
+    private fun digit(line: String): Int =
         with(line) {
             val _first = first { it.isDigit() } + ""
             val _last = last { it.isDigit() } + ""
             return (_first + _last).toInt()
         }
-    }
 
-    private fun part2(lines: List<String>) {
-        part1(lines)
-    }
+    private fun part2(lines: List<String>) = part1(lines)
 
-    private fun String.digitsOnly(): String {
-        return TextNum.entries.fold(this) { acc, it ->
+    private fun String.digitsOnly(): String =
+        TextNum.entries.fold(this) { acc, it ->
             acc.replace(it.string, it.int)
         }
-    }
+
 }
 
 private val test = """
