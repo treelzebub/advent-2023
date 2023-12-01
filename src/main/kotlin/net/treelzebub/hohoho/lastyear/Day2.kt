@@ -71,14 +71,6 @@ object Day2 {
         val sum = list.sum()
         println("PART 2 - Final Score: $sum")
     }
-
-    private fun part2Scores(char: Char): Int
-        = when (char) {
-            'X' -> 0
-            'Y' -> 3
-            'Z' -> 6
-            else -> throw IllegalArgumentException()
-        }
 }
 
 private fun matrix(input: String): List<Pair<Char, Char>> {
