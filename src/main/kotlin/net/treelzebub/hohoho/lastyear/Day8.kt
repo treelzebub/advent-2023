@@ -1,8 +1,6 @@
 package net.treelzebub.hohoho.lastyear
 
 object Day8 {
-
-
 }
 
 private val test = """
