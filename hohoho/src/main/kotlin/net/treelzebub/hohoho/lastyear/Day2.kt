@@ -1,6 +1,6 @@
 package net.treelzebub.hohoho.lastyear
 
-import java.lang.IllegalArgumentException
+import net.treelzebub.hohoho.splitNewLine
 
 enum class Result(val code: Char, val value: Int) {
     Win('Z', 6), Lose('X', 0), Draw('Y', 3);
@@ -82,7 +82,7 @@ object Day2 {
 }
 
 private fun matrix(input: String): List<Pair<Char, Char>> {
-    return input.split("\n").map { val i = it.split(" "); i[0][0] to i[1][0] }
+    return input.splitNewLine().map { val i = it.split(" "); i[0][0] to i[1][0] }
 }
 
 private val test = """

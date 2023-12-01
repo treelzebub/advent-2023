@@ -1,5 +1,7 @@
 package net.treelzebub.hohoho.lastyear
 
+import net.treelzebub.hohoho.splitNewLine
+
 object Day1 {
 
     fun go() {
@@ -15,7 +17,7 @@ object Day1 {
 
     private fun group(): List<List<Int>> {
         val mutable = mutableListOf<List<Int>>()
-        val raw = input.split("\n")
+        val raw = input.splitNewLine()
         var temp = mutableListOf<Int>()
 
         raw.forEachIndexed { i, it ->
