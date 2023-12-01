@@ -32,7 +32,6 @@ object Day1 {
         return mutable.toList()
     }
 
-    // return pairs of elf number to total calories
     private fun topThree(totals: List<Int>): List<Int> {
         val mutable = totals.toMutableSet()
         val retval = mutableListOf<Int>()
