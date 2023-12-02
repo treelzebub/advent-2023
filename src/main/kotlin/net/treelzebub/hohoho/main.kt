@@ -1,8 +1,9 @@
 package net.treelzebub.hohoho
 
 fun main(vararg args: String) {
-    lastYear()
+//    lastYear()
     Day1.go()
+    Day2.go()
 }
 
 fun lastYear() {
